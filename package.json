@@ -1,8 +1,9 @@
 {
   "name": "@bionikspoon/react-toolbox",
-  "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
+  "description":
+    "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.io",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "main": "./lib",
   "author": {
     "name": "React Toolbox Team",
@@ -77,7 +78,7 @@
     "karma-webpack": "^1.8.0",
     "lint-staged": "^3.2.3",
     "mocha": "^3.2.0",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.9.0",
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "^1.2.1",
     "pre-commit": "^1.2.2",
@@ -99,26 +100,29 @@
   },
   "scripts": {
     "babel": "babel ./components --out-dir ./lib",
-    "build": "cross-env NODE_ENV=production npm run babel && npm run sass && npm run tsd",
+    "build":
+      "cross-env NODE_ENV=production npm run babel && npm run sass && npm run tsd",
     "clean": "rimraf ./lib",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint ./ --ext .js",
-    "lint:scss": "sass-lint ./components/**/*.scss -v -i ./components/slider/style.scss",
+    "lint:scss":
+      "sass-lint ./components/**/*.scss -v -i ./components/slider/style.scss",
     "lint:staged": "lint-staged",
     "patch": "bumped release patch",
     "prebuild": "npm run clean",
     "prepublish": "npm run build",
     "release": "bumped release",
     "sass": "cpx \"./components/**/*.scss\" ./lib",
-    "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
+    "start":
+      "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --no-single-run",
     "tsd": "cpx \"./components/**/*.d.ts\" ./lib"
   },
   "license": "MIT",
   "peerDependencies": {
-    "react": "^0.14 || ~15.4.0 || ^16.0.0",
-    "react-dom": "^0.14.0 || ~15.4.0 || ^16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "pre-commit": "lint:staged"
 }
