@@ -35,4 +35,4 @@ plugins:
 
     'Publishing at NPM':
       plugin: 'bumped-terminal'
-      command: 'yarn publish'
+      command: 'npm publish'
