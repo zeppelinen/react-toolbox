@@ -10,11 +10,11 @@ plugins:
 
     'Linting projects files':
       plugin: 'bumped-terminal'
-      command: 'npm run lint'
+      command: 'yarn run lint'
 
     'Preparing build':
       plugin: 'bumped-terminal'
-      command: 'npm run prepublish'
+      command: 'yarn run prepublish'
 
     'Generating CHANGELOG file':
       plugin: 'bumped-changelog'
@@ -35,4 +35,4 @@ plugins:
 
     'Publishing at NPM':
       plugin: 'bumped-terminal'
-      command: 'npm publish'
+      command: 'yarn publish'
