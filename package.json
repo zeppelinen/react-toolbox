@@ -4,6 +4,9 @@
   "homepage": "http://www.react-toolbox.io",
   "version": "3.0.0",
   "main": "./lib",
+  "engines": {
+    "yarn": "1.13.x"
+  },
   "author": {
     "name": "React Toolbox Team",
     "url": "http://www.react-toolbox.io"
