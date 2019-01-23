@@ -370,16 +370,8 @@ ReactDOM.findDOMNode(this)
 
     render () {
       const {
-        allowCreate,
         error,
         label,
-        source,
-        suggestionMatch, //eslint-disable-line no-unused-vars
-        selectedPosition,
-        keepFocusOnChange,
-        showSuggestionsWhenValueIsSet,
-        showSelectedWhenNotInSource,
-        onQueryChange, //eslint-disable-line no-unused-vars
         theme,
         ...other
       } = this.props;
