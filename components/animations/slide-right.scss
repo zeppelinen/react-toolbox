@@ -1,8 +1,8 @@
-.enter, .exit {
+.enter, .leave {
   position: absolute;
 }
 
-.enterActive, .exitActive {
+.enterActive, .leaveActive {
   transition-timing-function: ease-in-out;
   transition-duration: 350ms;
   transition-property: transform, opacity;
@@ -18,11 +18,11 @@
   }
 }
 
-.exit {
+.leave {
   opacity: 1;
   transform: translateX(0);
 
-  &.exitActive {
+  &.leaveActive {
     opacity: 0;
     transform: translateX(-100%);
   }

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import TransitionGroup from 'react-transition-group/TransitionGroup';
-import CSSTransition from 'react-transition-group/CSSTransition';
+import CssTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { ZoomIn, ZoomOut } from '../animations';
 import time from '../utils/time.js';
 import Hours from './ClockHours.js';
@@ -30,7 +29,7 @@ class Clock extends Component {
   };
 
   state = {
-    center: { x: null, y: null },
+    center: {x: null, y: null},
     radius: 0
   };
 
@@ -111,15 +110,13 @@ class Clock extends Component {
     const animation = this.props.display === 'hours' ? ZoomOut : ZoomIn;
     return (
       <div data-react-toolbox='clock' className={theme.clock}>
-        <div ref='placeholder' className={theme.placeholder} style={{ height: this.state.radius * 2 }}>
-          <TransitionGroup component={null}>
-            <CSSTransition key={this.props.display} classNames={animation} timeout={{ enter: 500, exit: 500 }}>
-              <div key={this.props.display} className={theme.clockWrapper} style={{ height: this.state.radius * 2 }}>
-                {this.props.display === 'hours' ? this.renderHours() : null}
-                {this.props.display === 'minutes' ? this.renderMinutes() : null}
-              </div>
-            </CSSTransition>
-          </TransitionGroup>
+        <div ref='placeholder' className={theme.placeholder} style={{height: this.state.radius * 2}}>
+          <CssTransitionGroup transitionName={animation} transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+            <div key={this.props.display} className={theme.clockWrapper} style={{height: this.state.radius * 2}}>
+              {this.props.display === 'hours' ? this.renderHours() : null}
+              {this.props.display === 'minutes' ? this.renderMinutes() : null}
+            </div>
+          </CssTransitionGroup>
         </div>
       </div>
     );
