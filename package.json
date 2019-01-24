@@ -2,12 +2,8 @@
   "name": "@bionikspoon/react-toolbox",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.io",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "./lib",
-  "engines": {
-    "yarn": "1.13.x"
-  },
-  "files": [],
   "author": {
     "name": "React Toolbox Team",
     "url": "http://www.react-toolbox.io"
@@ -102,6 +98,10 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.13.0"
   },
+  "engines": {
+    "yarn": "1.13.x"
+  },
+  "files": [],
   "scripts": {
     "babel": "babel ./components --out-dir ./lib",
     "build": "cross-env NODE_ENV=production yarn run babel && yarn run sass && yarn run tsd",
