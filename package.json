@@ -101,7 +101,7 @@
   "engines": {
     "yarn": "1.13.x"
   },
-  "files": [],
+  "files": ["*"],
   "scripts": {
     "babel": "babel ./components --out-dir ./lib",
     "build": "cross-env NODE_ENV=production yarn run babel && yarn run sass && yarn run tsd",
