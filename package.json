@@ -2,7 +2,7 @@
   "name": "@bionikspoon/react-toolbox",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.io",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "main": "./lib",
   "engines": {
     "yarn": "1.13.x"
