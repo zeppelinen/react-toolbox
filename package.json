@@ -2,8 +2,11 @@
   "name": "@bionikspoon/react-toolbox",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.io",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "./lib",
+  "engines": {
+    "yarn": "1.13.x"
+  },
   "author": {
     "name": "React Toolbox Team",
     "url": "http://www.react-toolbox.io"
@@ -39,12 +42,12 @@
     "classnames": "^2.2.5",
     "core-js": "^2.4.0",
     "immutability-helper": "^2.0.0",
-    "normalize.css": "^4.2.0",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.6.0",
     "react-css-themr": "^2.1.2"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^9.4.6",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -87,7 +90,7 @@
     "react-test-renderer": "^16.0.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
-    "react-transition-group": "^1.2.1",
+    "react-transition-group": "^2.5.3",
     "redbox-react": "^1.6.x",
     "rimraf": "^2.5.2",
     "sass-lint": "^1.10.2",
@@ -103,8 +106,8 @@
     "build": "cross-env NODE_ENV=production yarn run babel && yarn run sass && yarn run tsd",
     "clean": "rimraf ./lib",
     "lint": "yarn run lint:js && yarn run lint:scss",
-    "lint:js": "eslint ./ --ext .js",
-    "lint:scss": "sass-lint ./components/**/*.scss -v -i ./components/slider/style.scss",
+    "lint:js": "eslint ./ --ext .js --max-warnings 0",
+    "lint:scss": "sass-lint ./components/**/*.scss -v -i ./components/slider/style.scss --max-warnings 0",
     "lint:staged": "lint-staged",
     "patch": "bumped release patch",
     "prebuild": "yarn run clean",

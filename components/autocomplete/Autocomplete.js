@@ -369,17 +369,18 @@ ReactDOM.findDOMNode(this)
     }
 
     render () {
+      // Unused variables represent props that shouldn't be passed to Input component
       const {
-        allowCreate,
+        allowCreate, //eslint-disable-line no-unused-vars
         error,
+        keepFocusOnChange, //eslint-disable-line no-unused-vars
         label,
-        source,
-        suggestionMatch, //eslint-disable-line no-unused-vars
-        selectedPosition,
-        keepFocusOnChange,
-        showSuggestionsWhenValueIsSet,
-        showSelectedWhenNotInSource,
         onQueryChange, //eslint-disable-line no-unused-vars
+        selectedPosition, //eslint-disable-line no-unused-vars
+        showSelectedWhenNotInSource, //eslint-disable-line no-unused-vars
+        showSuggestionsWhenValueIsSet, //eslint-disable-line no-unused-vars
+        source, //eslint-disable-line no-unused-vars
+        suggestionMatch, //eslint-disable-line no-unused-vars
         theme,
         ...other
       } = this.props;
