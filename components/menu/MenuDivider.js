@@ -3,7 +3,7 @@ import { themr } from 'react-css-themr';
 import { MENU } from '../identifiers.js';
 
 const MenuDivider = ({ theme }) => (
-  <hr data-react-toolbox='menu-divider' className={theme.menuDivider}/>
+  <span data-react-toolbox='menu-divider' className={theme.menuDivider}/>
 );
 
 MenuDivider.propTypes = {
