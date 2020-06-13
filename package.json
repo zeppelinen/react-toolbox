@@ -99,7 +99,7 @@
     "webpack-hot-middleware": "^2.13.0"
   },
   "engines": {
-    "yarn": "1.22.x"
+    "yarn": "^1.22.0"
   },
   "files": [
     "*"
