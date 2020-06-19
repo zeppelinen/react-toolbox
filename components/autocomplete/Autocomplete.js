@@ -8,6 +8,13 @@ import InjectChip from '../chip/Chip.js';
 import InjectInput from '../input/Input.js';
 import events from '../utils/events.js';
 
+// eslint-disable-next-line no-unused-vars
+const POSITION = {
+  AUTO: 'auto',
+  DOWN: 'down',
+  UP: 'up'
+};
+
 const factory = (Chip, Input) => {
   class Autocomplete extends Component {
     static propTypes = {
@@ -42,54 +49,52 @@ const factory = (Chip, Input) => {
       value: PropTypes.any
     }
 
-    static defaultProps = {
-      allowCreate: false,
-      className: '',
-      direction: 'auto',
-      keepFocusOnChange: false,
-      multiple: true,
-      selectedPosition: 'above',
-      showSelectedWhenNotInSource: false,
-      showSuggestionsWhenValueIsSet: false,
-      source: {},
-      suggestionMatch: 'start'
-    }
+   static defaultProps = {
+     allowCreate: false,
+     className: '',
+     direction: 'auto',
+     keepFocusOnChange: false,
+     multiple: true,
+     selectedPosition: 'above',
+     showSelectedWhenNotInSource: false,
+     showSuggestionsWhenValueIsSet: false,
+     source: {},
+     suggestionMatch: 'start'
+   };
 
-    state = {
-      direction: this.props.direction,
-      focus: false,
-      showAllSuggestions: this.props.showSuggestionsWhenValueIsSet,
-      query: this.query(this.props.value),
-      isValueAnObject: false
-    }
+   state = {
+     direction: this.props.direction,
+     focus: false,
+     showAllSuggestions: this.props.showSuggestionsWhenValueIsSet,
+     query: this.query(this.props.value),
+     isValueAnObject: false
+   };
 
-    componentWillReceiveProps (nextProps) {
-      if (!this.props.multiple) {
-        this.setState({
-          query: this.query(nextProps.value)
-        });
-      }
-      if (this.state.focus && this.props.direction !== nextProps.direction) {
-        const direction = this.calculateDirection(nextProps.direction);
-        this.setState({ direction });
-      }
-    }
+   componentWillReceiveProps (nextProps) {
+     if (!this.props.multiple) {
+       this.setState({
+         query: this.query(nextProps.value)
+       });
+     }
+     if (this.state.focus && this.props.direction !== nextProps.direction) {
+       const direction = this.calculateDirection(nextProps.direction);
+       this.setState({ direction });
+     }
+   }
 
-    handleChange = (values, event) => {
-      const value = this.props.multiple ? values : values[0];
-      const { showSuggestionsWhenValueIsSet: showAllSuggestions } = this.props;
-      const query = this.query(value);
-      if (this.props.onChange) this.props.onChange(value, event);
-      if (this.props.keepFocusOnChange) {
-        this.setState({ query, showAllSuggestions });
-      } else {
-        this.setState({ focus: false, query, showAllSuggestions }, () => {
-          ReactDOM.findDOMNode(this)
-            .querySelector('input')
-            .blur();
-        });
-      }
-    }
+   handleChange = (values, event) => {
+     const value = this.props.multiple ? values : values[0];
+     const { showSuggestionsWhenValueIsSet: showAllSuggestions } = this.props;
+     const query = this.query(value);
+     if (this.props.onChange) this.props.onChange(value, event);
+     if (this.props.keepFocusOnChange) {
+       this.setState({ query, showAllSuggestions });
+     } else {
+       this.setState({ focus: false, query, showAllSuggestions }, () => {
+         ReactDOM.findDOMNode(this).querySelector('input').blur();
+       });
+     }
+   };
 
     handleMouseDown = event => {
       this.selectOrCreateActiveItem(event);

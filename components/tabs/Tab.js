@@ -12,6 +12,7 @@ class Tab extends Component {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
+    href: PropTypes.any,
     icon: PropTypes.node,
     label: PropTypes.node,
     onActive: PropTypes.func,
@@ -39,6 +40,16 @@ class Tab extends Component {
     }
   }
 
+  handleHrefClick = (event) => {
+    if (event.metaKey) {
+      return;
+    }
+    event.preventDefault();
+    if (!this.props.disabled && this.props.onClick) {
+      this.props.onClick(event);
+    }
+  };
+
   handleClick = (event) => {
     if (!this.props.disabled && this.props.onClick) {
       this.props.onClick(event);
@@ -48,7 +59,7 @@ class Tab extends Component {
   render () {
     const {
       onActive, // eslint-disable-line
-      active, activeClassName, className, disabled, hidden, label, icon, theme, ...other
+      active, activeClassName, className, disabled, hidden, label, icon, theme, href, ...other
     } = this.props;
     const _className = classnames(theme.label, {
       [theme.active]: active,
@@ -58,6 +69,15 @@ class Tab extends Component {
       [theme.disabled]: disabled,
       [activeClassName]: active
     }, className);
+
+    if (href) {
+      return (
+        <a href={href} rel="nofollow" {...other} data-react-toolbox='tab' className={_className} onClick={this.handleHrefClick}>
+          {icon && <FontIcon className={theme.icon} value={icon}/>}
+          {label}
+        </a>
+      );
+    }
 
     return (
       <button type="button" {...other} data-react-toolbox='tab' className={_className} onClick={this.handleClick}>
