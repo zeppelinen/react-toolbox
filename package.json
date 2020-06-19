@@ -22,11 +22,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-toolbox/react-toolbox.git"
+    "url": "git+https://github.com/picryl/react-toolbox.git"
   },
   "bugs": {
     "email": "issues@react-toolbox.com",
-    "url": "https://github.com/react-toolbox/react-toolbox/issues"
+    "url": "https://github.com/picryl/react-toolbox/issues"
   },
   "keywords": [
     "components",
@@ -41,7 +41,7 @@
     "immutability-helper": "^2.0.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "react-css-themr": "git+https://github.com/zeppelinen/react-css-themr.git#develop"
+    "react-css-themr": "git+https://github.com/picryl/react-css-themr.git#develop"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.6",
