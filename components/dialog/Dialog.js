@@ -23,6 +23,7 @@ const factory = (Overlay, Button) => {
     return (
       <Overlay
         active={props.active}
+        theme={props.overlayTheme}
         onClick={props.onOverlayClick}
         onEscKeyDown={props.onEscKeyDown}
         onMouseDown={props.onOverlayMouseDown}
@@ -56,6 +57,7 @@ const factory = (Overlay, Button) => {
     onOverlayMouseDown: PropTypes.func,
     onOverlayMouseMove: PropTypes.func,
     onOverlayMouseUp: PropTypes.func,
+    overlayTheme: PropTypes.object,
     theme: PropTypes.shape({
       active: PropTypes.string,
       body: PropTypes.string,
@@ -73,7 +75,8 @@ const factory = (Overlay, Button) => {
     actions: [],
     active: false,
     disableScrolling: false,
-    type: 'normal'
+    type: 'normal',
+    overlayTheme: {}
   };
 
   return ActivableRenderer()(Dialog);
