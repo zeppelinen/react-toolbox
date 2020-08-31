@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { themr } from 'react-css-themr';
 import classnames from 'classnames';
 import { CARD } from '../identifiers.js';

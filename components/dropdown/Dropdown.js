@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
@@ -205,7 +205,7 @@ const factory = (Input) => {
             onClick={this.handleClick}
             required={this.props.required}
             readOnly
-            ref={node => { this.inputNode = node && node.getWrappedInstance(); }}
+            innerRef={node => { this.inputNode = node && node.ref; }}
             type={template && selected ? 'hidden' : null}
             theme={theme}
             themeNamespace="input"

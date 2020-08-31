@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { FontIcon } from '../font_icon';
 import { themr } from 'react-css-themr';
@@ -12,11 +12,11 @@ class Tab extends Component {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
+    href: PropTypes.any,
     icon: PropTypes.node,
     label: PropTypes.node,
     onActive: PropTypes.func,
     onClick: PropTypes.func,
-    href: PropTypes.any,
     theme: PropTypes.shape({
       active: PropTypes.string,
       disabled: PropTypes.string,

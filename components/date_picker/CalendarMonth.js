@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import time from '../utils/time.js';
 import utils from '../utils/utils.js';
 import CalendarDay from './CalendarDay.js';

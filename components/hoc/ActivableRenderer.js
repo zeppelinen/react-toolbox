@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 const ActivableRendererFactory = (options = {delay: 500}) =>
   ActivableComponent => class ActivableRenderer extends Component {

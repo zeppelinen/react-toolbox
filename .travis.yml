@@ -1,11 +1,16 @@
-sudo: false
-
 language: node_js
-
 node_js:
+  - node
+  - lts/*
+  - 10.13
+  - 8
   - 6
-  - 4
-  
-script:
-  - npm run lint
-  - npm test
+before_install:
+  - npm i -g yarn@$(jq '.engines.yarn' package.json --raw-output)
+  - export PATH="$(npm -g bin)/.yarn/bin:$PATH"
+install:
+  - yarn install --ignore-engines
+before_script:
+  - yarn lint
+cache:
+  yarn: true

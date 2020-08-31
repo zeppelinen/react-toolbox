@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import Portal from '../hoc/Portal';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';

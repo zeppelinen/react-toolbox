@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import events from '../utils/events.js';
 import prefixer from '../utils/prefixer.js';
 import utils from '../utils/utils.js';

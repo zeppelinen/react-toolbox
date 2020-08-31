@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
@@ -155,9 +155,7 @@ const factory = (ProgressBar, Input) => {
     }
 
     getInput () {
-      return this.refs.input && this.refs.input.getWrappedInstance
-        ? this.refs.input.getWrappedInstance()
-        : this.refs.input;
+      return this.refs.input && this.refs.input.ref;
     }
 
     getKeyboardEvents () {
