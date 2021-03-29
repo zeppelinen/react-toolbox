@@ -6937,9 +6937,9 @@ rc@^1.0.1, rc@^1.1.6, rc@~1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-css-themr@git+https://github.com/zeppelinen/react-css-themr.git#develop":
+"react-css-themr@git+https://github.com/picryl/react-css-themr.git#develop":
   version "4.0.0"
-  resolved "git+https://github.com/zeppelinen/react-css-themr.git#87a6cffe95a9181e2912e46ca1b76e0ebf57a95d"
+  resolved "git+https://github.com/picryl/react-css-themr.git#e6c801bce80c62208219a8e79b00ea5ddf4ee7e0"
   dependencies:
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
