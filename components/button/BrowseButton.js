@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { BUTTON } from '../identifiers.js';
 import InjectFontIcon from '../font_icon/FontIcon.js';
 import rippleFactory from '../ripple/Ripple.js';

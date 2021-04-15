@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { TABS } from '../identifiers.js';
 import { tabsFactory } from './Tabs.js';
 import { TabContent } from './TabContent.js';

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { MENU } from '../identifiers.js';
 import { events, utils } from '../utils';
 import InjectMenuItem from './MenuItem.js';

@@ -164,7 +164,7 @@ Check for each component what key uses. Then, when you have a theme object fully
 ```js
 import React from 'react';
 import { render } from 'react-dom';
-import { ThemeProvider } from 'react-css-themr';
+import { ThemeProvider } from '@picryl/react-css-themr';
 import theme from './theme/theme.js';
 import App from './App.js';
 

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { LIST } from '../identifiers.js';
 import InjectListItemAction from './ListItemAction.js';
 

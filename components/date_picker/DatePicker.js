@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { DATE_PICKER } from '../identifiers.js';
 import events from '../utils/events.js';
 import time from '../utils/time.js';

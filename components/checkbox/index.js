@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { CHECKBOX } from '../identifiers.js';
 import themedRippleFactory from '../ripple';
 import { checkboxFactory } from './Checkbox.js';

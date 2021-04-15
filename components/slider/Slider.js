@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { SLIDER } from '../identifiers.js';
 import events from '../utils/events.js';
 import utils from '../utils/utils.js';

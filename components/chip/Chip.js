@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { CHIP } from '../identifiers.js';
 import InjectAvatar from '../avatar/Avatar.js';
 

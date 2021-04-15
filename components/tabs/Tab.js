@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { FontIcon } from '../font_icon';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { TABS } from '../identifiers.js';
 
 class Tab extends Component {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Portal from '../hoc/Portal';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from '@picryl/react-css-themr';
 import { TOOLTIP } from '../identifiers.js';
 import events from '../utils/events';
 import utils from '../utils/utils';
